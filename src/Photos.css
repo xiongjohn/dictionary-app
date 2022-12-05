@@ -1,0 +1,48 @@
+.Photos section {
+  display: grid;
+  gap: 1rem;
+  padding: 0.5rem;
+}
+
+.Photos img {
+  max-width: 100%;
+  display: block;
+  border-radius: 0.25rem;
+}
+
+.Photos section:nth-child(1) {
+  grid-area: one;
+}
+.Photos section:nth-child(2) {
+  grid-area: two;
+}
+.Photos section:nth-child(3) {
+  grid-area: three;
+}
+.Photos section:nth-child(4) {
+  grid-area: four;
+}
+.Photos section:nth-child(5) {
+  grid-area: five;
+}
+.Photos section:nth-child(6) {
+  grid-area: six;
+}
+.Photos section:nth-child(7) {
+  grid-area: seven;
+}
+.Photos section:nth-child(8) {
+  grid-area: eight;
+}
+.Photos section:nth-child(9) {
+  grid-area: nine;
+}
+
+@media screen and (min-width: 700px) {
+  .Photos section {
+    grid-template-areas:
+      "one two three"
+      "four five six"
+      "seven eight nine";
+  }
+}

@@ -10,7 +10,6 @@ export default function Phonetics(props) {
   function playAudio() {
     let playSound = new Audio(sound);
     playSound.play(sound);
-    console.log(sound);
   }
 
   function handleClick(event) {

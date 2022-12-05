@@ -3,13 +3,12 @@ import Synonyms from "./Synonyms";
 import Example from "./Example";
 
 export default function Meaning(props) {
-  console.log(props.meaning);
   return (
     <div className="Meaning">
       <h2>{props.meaning.partOfSpeech}</h2>
       <p>
         {props.meaning.definitions.map(function (definitions, index) {
-          if (definitions.example) {
+          if (index < 5) {
             return (
               <ul key={index}>
                 <li>

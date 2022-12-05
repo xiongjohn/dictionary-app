@@ -45,4 +45,8 @@
       "four five six"
       "seven eight nine";
   }
+
+  .Photos img:hover {
+    opacity: 0.7;
+  }
 }

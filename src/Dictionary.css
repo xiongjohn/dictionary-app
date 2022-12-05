@@ -20,5 +20,22 @@
 
 .Dictionary section {
   text-align: left;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
+}
+
+.Dictionary ul {
+  padding-left: 1rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+@media screen and (min-width: 700px) {
+  .Dictionary main,
+  .Dictionary section {
+    max-width: 1000px;
+    display: block;
+    margin: 1rem auto;
+  }
 }

@@ -1,6 +1,6 @@
-.Photos section {
+.Photos .photos-grid {
   display: grid;
-  gap: 1rem;
+  gap: 0.5rem;
   padding: 0.5rem;
 }
 
@@ -10,36 +10,36 @@
   border-radius: 0.25rem;
 }
 
-.Photos section:nth-child(1) {
+.Photos .photos-grid:nth-child(1) {
   grid-area: one;
 }
-.Photos section:nth-child(2) {
+.Photos .photos-grid:nth-child(2) {
   grid-area: two;
 }
-.Photos section:nth-child(3) {
+.Photos .photos-grid:nth-child(3) {
   grid-area: three;
 }
-.Photos section:nth-child(4) {
+.Photos .photos-grid:nth-child(4) {
   grid-area: four;
 }
-.Photos section:nth-child(5) {
+.Photos .photos-grid:nth-child(5) {
   grid-area: five;
 }
-.Photos section:nth-child(6) {
+.Photos .photos-grid:nth-child(6) {
   grid-area: six;
 }
-.Photos section:nth-child(7) {
+.Photos .photos-grid:nth-child(7) {
   grid-area: seven;
 }
-.Photos section:nth-child(8) {
+.Photos .photos-grid:nth-child(8) {
   grid-area: eight;
 }
-.Photos section:nth-child(9) {
+.Photos .photos-grid:nth-child(9) {
   grid-area: nine;
 }
 
 @media screen and (min-width: 700px) {
-  .Photos section {
+  .Photos .photos-grid {
     grid-template-areas:
       "one two three"
       "four five six"

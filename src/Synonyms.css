@@ -1,0 +1,11 @@
+.Synonyms ul {
+  list-style: none;
+  /* font-weight: 700; */
+}
+
+.Synonyms li {
+  display: inline;
+  font-weight: 400;
+  font-style: italic;
+  text-transform: capitalize;
+}

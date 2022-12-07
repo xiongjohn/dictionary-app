@@ -5,17 +5,17 @@ import Photos from "./Photos";
 import "./Dictionary.css";
 
 export default function Dictionary(props) {
-  const [keyword, setKeyword] = useState(`animal`);
+  const [keyword, setKeyword] = useState(``);
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const randomWords = require("random-words");
 
   function handleDictionaryResponse(response) {
     setResults(response.data[0]);
   }
 
   function handlePexelsResponse(response) {
-    console.log(response.data);
     setPhotos(response.data);
   }
 
@@ -33,6 +33,8 @@ export default function Dictionary(props) {
   function handleSubmit(event) {
     event.preventDefault();
     search();
+
+    event.target[0].value = "";
   }
 
   function handleKeywordChange(event) {
@@ -51,13 +53,14 @@ export default function Dictionary(props) {
         </header>
         <main>
           <h2>What word do you want to look up?</h2>
-          <form onSubmit={handleSubmit}>
+          <form className="search-bar" onSubmit={handleSubmit}>
             <input
               type="search"
               placeholder="Enter a word"
               onChange={handleKeywordChange}
             ></input>
           </form>
+          <p>Suggested words: {randomWords({ exactly: 5, join: `, ` })}</p>
         </main>
 
         <Results results={results} />

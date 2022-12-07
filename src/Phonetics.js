@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import "./Phonetics.css";
 
 export default function Phonetics(props) {
   const [sound, setSound] = useState(props.phonetics.audio);
@@ -21,10 +22,10 @@ export default function Phonetics(props) {
   if (props.phonetics.audio.length > 0) {
     return (
       <div className="Phonetics">
-        <p>
-          <button onClick={handleClick}>Play</button>
-          {props.phonetics.text}
-        </p>
+        <button onClick={handleClick}>
+          <i class="far fa-play-circle"></i>
+        </button>
+        <p>{props.phonetics.text}</p>
       </div>
     );
   } else {

@@ -1,0 +1,16 @@
+.Phonetics button {
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  background: none;
+}
+
+.Phonetics button:hover {
+  color: #30c5ff;
+}
+
+.Phonetics p {
+  display: inline;
+  padding-left: 0.5rem;
+  vertical-align: 40%;
+}

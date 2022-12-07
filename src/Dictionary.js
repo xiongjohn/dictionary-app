@@ -50,7 +50,6 @@ export default function Dictionary(props) {
       <div className="Dictionary">
         <header>
           <h1>Dictionary</h1>
-          <i class="far fa-play-circle"></i>
         </header>
         <main>
           <h2>What word do you want to look up?</h2>

@@ -65,6 +65,10 @@ export default function Dictionary(props) {
 
         <Results results={results} />
         <Photos photos={photos} />
+        <footer>
+          Coded by John Xiong - <a href="">Github</a> - Hosted on -{" "}
+          <a href="">Netlify</a>
+        </footer>
       </div>
     );
   } else {

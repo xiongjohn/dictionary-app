@@ -33,9 +33,9 @@
 
 .Dictionary footer {
   font-size: 0.75rem;
-  position: absolute;
-  bottom: 0px;
+
   padding-left: 1rem;
+  padding-bottom: 1rem;
   color: white;
 }
 

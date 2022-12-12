@@ -9,6 +9,7 @@ export default function Dictionary(props) {
   const [results, setResults] = useState(null);
   const [photos, setPhotos] = useState(null);
   const [loaded, setLoaded] = useState(false);
+  const [suggestedWord, setSuggestedWord] = useState("");
   const randomWords = require("random-words");
 
   function handleDictionaryResponse(response) {
@@ -38,12 +39,14 @@ export default function Dictionary(props) {
   }
 
   function handleKeywordChange(event) {
+    event.preventDefault();
     setKeyword(event.target.value);
   }
 
   function load() {
     setLoaded(true);
     search();
+    setSuggestedWord(randomWords({ exactly: 5, join: `, ` }));
   }
   if (loaded) {
     return (
@@ -60,14 +63,15 @@ export default function Dictionary(props) {
               onChange={handleKeywordChange}
             ></input>
           </form>
-          <p>Suggested words: {randomWords({ exactly: 5, join: `, ` })}</p>
+          <p>Suggested words: {suggestedWord}</p>
         </main>
 
         <Results results={results} />
         <Photos photos={photos} />
         <footer>
-          Coded by John Xiong - <a href="">Github</a> - Hosted on -{" "}
-          <a href="">Netlify</a>
+          Coded by John Xiong -{" "}
+          <a href="/https://github.com/xiongjohn/dictionary-app">Github</a> -
+          Hosted on - <a href="">Netlify</a>
         </footer>
       </div>
     );

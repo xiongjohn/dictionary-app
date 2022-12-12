@@ -71,7 +71,7 @@ export default function Dictionary(props) {
         <footer>
           Coded by John Xiong -{" "}
           <a href="/https://github.com/xiongjohn/dictionary-app">Github</a> -
-          Hosted on - <a href="">Netlify</a>
+          Hosted on - Netlify
         </footer>
       </div>
     );
